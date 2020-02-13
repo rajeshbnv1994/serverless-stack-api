@@ -39,12 +39,11 @@ provider:
   #  sampleEnvVar: ${env:SAMPLE_ENV_VAR}
 
 functions:
-  hello:
-    handler: functions/Create.main
+   create:
+    handler: create.main
     events:
       - http:
           path: notes
           method: post
           cors: true
           authorizer: aws_iam
-
